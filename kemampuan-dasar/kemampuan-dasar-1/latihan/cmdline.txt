@@ -1,0 +1,189 @@
+1. arp -a
+Interface: 192.168.47.90 --- 0xb
+Internet Address      Physical Address      Type
+  192.168.47.71         1e-01-6d-a0-ca-cd     dynamic
+  192.168.47.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+2. dir
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         8/19/2022  11:16 AM                powershellscripts
+
+3. cd
+
+ cd .\powershellscripts\
+
+4. cls
+
+Mengapus semua informasi command prompt
+
+5. help <cls>
+
+NAME
+    Clear-Host
+
+SYNOPSIS
+
+
+SYNTAX
+    Clear-Host [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+RELATED LINKS
+    https://go.microsoft.com/fwlink/?LinkID=225747
+
+REMARKS
+    To see the examples, type: "get-help Clear-Host -examples".
+    For more information, type: "get-help Clear-Host -detailed".
+    For technical information, type: "get-help Clear-Host -full".
+    For online help, type: "get-help Clear-Host -online"
+
+6. ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::4465:1fab:10fe:24a5%11
+   IPv4 Address. . . . . . . . . . . : 192.168.47.90
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.47.71
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+
+7. ping
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+Options:
+    -t             Ping the specified host until stopped.
+                   To see statistics and continue - type Control-Break;
+                   To stop - type Control-C.
+    -a             Resolve addresses to hostnames.
+    -n count       Number of echo requests to send.
+    -l size        Send buffer size.
+    -f             Set Don't Fragment flag in packet (IPv4-only).
+    -i TTL         Time To Live.
+    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
+                   and has no effect on the type of service field in the IP
+                   Header).
+    -r count       Record route for count hops (IPv4-only).
+    -s count       Timestamp for count hops (IPv4-only).
+    -j host-list   Loose source route along host-list (IPv4-only).
+    -k host-list   Strict source route along host-list (IPv4-only).
+    -w timeout     Timeout in milliseconds to wait for each reply.
+    -R             Use routing header to test reverse route also (IPv6-only).
+                   Per RFC 5095 the use of this routing header has been
+                   deprecated. Some systems may drop echo requests if
+                   this header is used.
+    -S srcaddr     Source address to use.
+    -c compartment Routing compartment identifier.
+    -p             Ping a Hyper-V Network Virtualization provider address.
+    -4             Force using IPv4.
+    -6             Force using IPv6.
+
+8. clear history
+
+menghapus history
+
+9. chdir
+
+set location
+
+10. label
+
+PS C:\Users\R O G\Documents> label
+Volume in drive C: is OS
+Volume Serial Number is 30E3-3929
+Volume label (32 characters, ENTER for none)?
+
+11. comp
+
+PS C:\Users\R O G\Documents> comp
+Name of first file to compare: mbkm
+Name of second file to compare:
+
+12. date
+
+PS C:\Users\R O G\Documents> date
+
+Friday, August 19, 2022 2:23:27 PM
+
+13. hostname
+
+PS C:\Users\R O G\Documents> hostname
+LAPTOP-CF0HKAO6
+
+14. pause
+
+PS C:\Users\R O G\Documents> pause
+Press Enter to continue...:
+
+15. klist
+
+PS C:\Users\R O G\Documents> klist
+
+Current LogonId is 0:0x2e3ae
+
+Cached Tickets: (0)
+
+16. clip
+
+PS C:\Users\R O G\Documents> clip
+
+INFO: Type "CLIP /?" for usage.
+
+17. chcp
+PS C:\Users\R O G\Documents> chcp
+Active code page: 437
+
+18. logman
+PS C:\Users\R O G\Documents> logman
+
+Data Collector Set                      Type                          Status
+-------------------------------------------------------------------------------
+
+The command completed successfully.
+
+19. mkdir
+
+PS C:\Users\R O G\Documents> mkdir zidan
+
+
+    Directory: C:\Users\R O G\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         8/19/2022   2:38 PM                zidan
+
+
+20. exit
+
+keluar dari terminal powershell
