@@ -29,8 +29,8 @@ def merge_sort(list):
             list[k] = right_list[j]
             j += 1
             k += 1
+    return list
             
-list = [23, 34, 98, 24, 56, 72, 11, 63, 120]
-print(list)
-merge_sort(list)
-print("setelah diurutkan\n",list)
+list = [100, 23, 34, 98, 24, 56, 72, 11, 63, 120, 99]
+print(list, "\nsetelah diurutkan")
+print(merge_sort(list))
