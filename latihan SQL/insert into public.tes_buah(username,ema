@@ -1,0 +1,11 @@
+insert into public.tes_buah(username,email,created_on) values ('Yor Forger','yorforger@mail.com',current_timestamp)
+
+update public.tes_buah  
+set username = 'himawari',
+email = 'klee@mail.com'
+where username = 'hikari'
+
+delete from public.tes_buah 
+where username = 'himawari'
+
+select*from public.tes_buah 
