@@ -34,6 +34,13 @@ def List():
             "nama": i.nama,
             "deskripsi": i.deskripsi,
         })
+    if not collTable:
+        return responses.Make(
+            Status=HTTPStatus.OK.value,
+            Message="error",
+            Data="doesn't exist."
+        ), HTTPStatus.BAD_REQUEST.value
+        
     return responses.Make(
         Status=HTTPStatus.OK.value,
         Message="success",
@@ -49,12 +56,19 @@ def Update(tableId):
             Message="error",
             Data=str(err)
         ), HTTPStatus.BAD_REQUEST.value
-    
+        
     collTable = models.Tables.objects(id=ObjectId(tableId)).update(nama=bodyJson["nama"], deskripsi=bodyJson["deskripsi"])
     return bodyJson
 
 def Delete(tableId):
-    models.Tables.objects(id=ObjectId(tableId)).delete()
+    collTable = models.Tables.objects(id=ObjectId(tableId)).delete()
+    if not collTable:
+        return responses.Make(
+            Status=HTTPStatus.OK.value,
+            Message="error",
+            Data=f"Data dengan id: {tableId} sudah terhapus"
+        ), HTTPStatus.BAD_REQUEST.value
+    
     return responses.Make(
         Status=HTTPStatus.OK.value,
         Message="success",
@@ -66,7 +80,7 @@ def Detail(tableId):
     if not collTable:
         return responses.Make(
             Status=HTTPStatus.OK.value,
-            Message="error",
+            Message="Data tidak ada",
             Data="doesn't exist."
         ), HTTPStatus.BAD_REQUEST.value
     return responses.Make(

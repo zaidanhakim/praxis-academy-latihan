@@ -5,9 +5,9 @@ from app import configs
 
 connect(alias='db_test', db='db_test')
 #connect('mydb')
-class Roles(Document):
-    roleName = StringField() 
-    meta = {'db_alias': 'db_test'}
+#class Roles(Document):
+    #roleName = StringField() 
+    #meta = {'db_alias': 'db_test'}
 
 class Tables(Document):
     #roleId = ReferenceField()
@@ -15,7 +15,7 @@ class Tables(Document):
     deskripsi = StringField(max_length=100, required=True, unique=True)
     #userEmail = EmailField(required=True, unique=True)
     #userPassword = StringField(required=True)
-    #createdAt = DateTimeField(required=True, default=datetime.utcnow())
+    createdAt = DateTimeField(required=True, default=datetime.utcnow())
     
 #def Role(Document):
     #roleName = StringField()
