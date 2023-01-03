@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+      {{message}}
+    </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<h1>Daftar</h1>
+<form action="/register" method="post">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      placeholder="masukkan username"
+      name="user_input"
+      required
+    />
+    <label for="floatingInput">Username</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="password"
+      class="form-control"
+      id="floatingPassword"
+      placeholder="Password"
+      name="password_input1"
+      required
+    />
+    <label for="floatingPassword">Password</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="password"
+      class="form-control"
+      id="floatingPassword"
+      placeholder="Password"
+      name="password_input2"
+      required
+    />
+    <label for="floatingPassword">Confirm Password</label>
+  </div>
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit">Login</button>
+  </div>
+</form>
+
+{% endblock %}
